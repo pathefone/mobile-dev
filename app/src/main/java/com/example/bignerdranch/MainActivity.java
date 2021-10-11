@@ -2,6 +2,8 @@ package com.example.bignerdranch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton mNextButton;
     private ImageButton mPrevButton;
     private TextView mQuestionTextView;
+    
 
     private QuizQuestion[] mQuestionList = new QuizQuestion[] {
             new QuizQuestion(R.string.question1, true),
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         mCurrentIndex = (mCurrentIndex + 1 ) % mQuestionList.length; //Using mod to set index 0 when maximum
         int question = mQuestionList[mCurrentIndex].getmQuestion();
         mQuestionTextView.setText(question);
+        mQuestionTextView.setTextColor(Color.GRAY);
     }
 
     private void previousQuestion() {
@@ -52,10 +56,12 @@ public class MainActivity extends AppCompatActivity {
 
         if(userPressedTrue == answerIsTrue) {
             messageRedId = R.string.correct_toast;
-            
+            mQuestionTextView.setTextColor(Color.GREEN);
+
         }
         else {
             messageRedId = R.string.incorrect_toast;
+            mQuestionTextView.setTextColor(Color.RED);
         }
 
         Toast.makeText(this,messageRedId,Toast.LENGTH_SHORT).show();
