@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BigNerdRanch</string>
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="correct_toast">Correct!</string>
+    <string name="incorrect_toast">Incorrect!</string>
+    <string name="no_previous_questions">This is the first question!</string>
+    <string name="next_button">Next</string>
+    <string name="previous_button">Previous</string>
+    <string name="question1">Are you made out of molecules?</string>
+    <string name="question2">Do plant cells have chlorophyll?</string>
+    <string name="question3">Are stars far away?</string>
+    <string name="question4">Is there a black hole nearby?</string>
+    <string name="question5">Do you have mitochondria?</string>
+    <string name="backdesc">Go back arrow</string>
+</resources>
